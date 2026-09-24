@@ -129,11 +129,11 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 }
 
 export const SECTION_COVERS: Record<string, string> = {
-  ai: `${import.meta.env.BASE_URL}works/covers/ai.jpg`,
-  analytics: `${import.meta.env.BASE_URL}works/covers/analytics.jpg`,
-  automation: `${import.meta.env.BASE_URL}works/covers/automation.jpg`,
-  webgl: `${import.meta.env.BASE_URL}works/covers/webgl.jpg`,
-  ml: `${import.meta.env.BASE_URL}works/covers/ml.jpg`,
+  ai: `${import.meta.env.BASE_URL}works/covers/ai.svg`,
+  analytics: `${import.meta.env.BASE_URL}works/covers/analytics.svg`,
+  automation: `${import.meta.env.BASE_URL}works/covers/automation.svg`,
+  webgl: `${import.meta.env.BASE_URL}works/covers/webgl.svg`,
+  ml: `${import.meta.env.BASE_URL}works/covers/ml.svg`,
 }
 
 export function sectionCount(section: WorkSection): number {
