@@ -128,7 +128,7 @@ function Post2({focusRef, frameRef, dofBokehRef, dofRangeRef}:{focusRef:MutableR
 
   return (
     <EffectComposer multisampling={0} stencilBuffer={false} depthBuffer>
-      {post.dof ? <DepthOfField ref={dofRef} target={[0,1.2,0]} worldFocusRange={post.focusRange} bokehScale={post.focusBokeh} height={480} /> : null}
+      <DepthOfField ref={dofRef} target={[0,1.2,0]} worldFocusRange={post.focusRange} bokehScale={post.focusBokeh} height={480} />
       <Bloom mipmapBlur intensity={post.bloomIntensity} luminanceThreshold={post.bloomThreshold} luminanceSmoothing={0.3} />
       <SMAA />
     </EffectComposer>
