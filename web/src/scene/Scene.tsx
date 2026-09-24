@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import Env from './Env'
 import { FOCUS_POINTS, FRAMES_PER_NODE } from '../data/focusPoints'
 
-const CHARACTER_MODEL = `${import.meta.env.BASE_URL}models/noor-character.glb`
+const CHARACTER_MODEL = `${import.meta.env.BASE_URL}models/Meshy_AI__0924181510_texture.glb`
 const HAS_TIMELINE_MODEL = false
 
 useGLTF.preload(CHARACTER_MODEL)
