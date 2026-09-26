@@ -100,9 +100,9 @@ function NoorCharacter({ focusRef, frameRef, dofBokehRef, dofRangeRef }:{focusRe
 
     // Gentle idle animation so the character never feels like a static cutout.
     const t = performance.now() * 0.001
-    model.position.y = Math.sin(t * 1.25) * 0.035
-    model.rotation.z = Math.sin(t * 0.72) * 0.012
-    model.rotation.y += Math.sin(t * 0.55) * 0.0007
+    model.position.y = Math.sin(t * 1.55) * 0.065
+    model.rotation.z = Math.sin(t * 0.9) * 0.022
+    model.rotation.y = Math.sin(t * 0.6) * 0.018
 
     if (focusRef) focusRef.current.set(0, 1.2, 0)
     if (frameRef) frameRef.current = 0
@@ -111,7 +111,7 @@ function NoorCharacter({ focusRef, frameRef, dofBokehRef, dofRangeRef }:{focusRe
     void camera
   })
 
-  return <group position={[0,-1.7,0]} scale={2.35}><primitive object={model} /></group>
+  return <group position={[0,-1.7,0]} scale={2.85}><primitive object={model} /></group>
 }
 
 function Post2({focusRef, frameRef, dofBokehRef, dofRangeRef}:{focusRef:MutableRefObject<THREE.Vector3>;frameRef:MutableRefObject<number>;dofBokehRef:MutableRefObject<number>;dofRangeRef:MutableRefObject<number>}) {
