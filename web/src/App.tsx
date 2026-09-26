@@ -92,6 +92,9 @@ function StickerField() {
     { cls: 'sticker sticker-ai', text: 'AI', label: 'AI' },
     { cls: 'sticker sticker-powerbi', text: '◒', label: 'Power BI' },
     { cls: 'sticker sticker-plus', text: '+', label: 'plus' },
+    { cls: 'sticker sticker-sparkle', text: '✧', label: 'sparkle-b' },
+    { cls: 'sticker sticker-data', text: 'DATA', label: 'data' },
+    { cls: 'sticker sticker-chart', text: '↗', label: 'chart' },
   ]
   return (
     <div className="sticker-field" aria-hidden="true">
