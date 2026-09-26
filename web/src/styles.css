@@ -190,6 +190,46 @@ canvas {
   animation-delay: -2.9s;
 }
 
+.sticker-sparkle {
+  left: 36%;
+  top: 20%;
+  color: #d9a4bb;
+  font-size: 36px;
+  animation-delay: -4.1s;
+}
+
+.sticker-data {
+  left: 34%;
+  top: 24%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.86);
+  border: 2px solid #d9b4c4;
+  color: #876477;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  transform: rotate(-6deg);
+  animation-delay: -2.1s;
+}
+
+.sticker-chart {
+  right: 34%;
+  top: 18%;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #e9d2f2;
+  color: #80608e;
+  font-size: 25px;
+  transform: rotate(8deg);
+  animation-delay: -1.4s;
+}
+
+.sticker-sparkle, .sticker-data, .sticker-chart {
+  animation-duration: 4.8s;
+  will-change: transform;
+}
+
 @keyframes stickerFloat {
   0%, 100% {
     translate: 0 0;
