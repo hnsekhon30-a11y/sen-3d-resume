@@ -98,7 +98,12 @@ function NoorCharacter({ focusRef, frameRef, dofBokehRef, dofRangeRef }:{focusRe
       model.quaternion.slerp(tmpQuat.current, 0.04)
     }
 
-    // Static character focus for current non-animated model.
+    // Gentle idle animation so the character never feels like a static cutout.
+    const t = performance.now() * 0.001
+    model.position.y = Math.sin(t * 1.25) * 0.035
+    model.rotation.z = Math.sin(t * 0.72) * 0.012
+    model.rotation.y += Math.sin(t * 0.55) * 0.0007
+
     if (focusRef) focusRef.current.set(0, 1.2, 0)
     if (frameRef) frameRef.current = 0
     if (dofBokehRef) dofBokehRef.current = -1
