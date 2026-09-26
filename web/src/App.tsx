@@ -83,6 +83,25 @@ function Hero({ lang, cueOpacity }: { lang: Lang; cueOpacity: MotionValue<number
   )
 }
 
+function StickerField() {
+  const stickers = [
+    { cls: 'sticker sticker-star', text: '✦', label: 'sparkle' },
+    { cls: 'sticker sticker-heart', text: '♥', label: 'heart' },
+    { cls: 'sticker sticker-flower', text: '✿', label: 'flower' },
+    { cls: 'sticker sticker-sql', text: 'SQL', label: 'SQL' },
+    { cls: 'sticker sticker-ai', text: 'AI', label: 'AI' },
+    { cls: 'sticker sticker-powerbi', text: '◒', label: 'Power BI' },
+    { cls: 'sticker sticker-plus', text: '+', label: 'plus' },
+  ]
+  return (
+    <div className="sticker-field" aria-hidden="true">
+      {stickers.map((s) => (
+        <span key={s.label} className={s.cls}>{s.text}</span>
+      ))}
+    </div>
+  )
+}
+
 function LangToggle({ lang, onToggle }: { lang: Lang; onToggle: () => void }) {
   return (
     <button className="lang-toggle" onClick={onToggle} aria-label="切换语言 / Switch language">
@@ -177,6 +196,8 @@ export default function App() {
         <div className="hero-meta hm-bl">Power BI · SQL · AI</div>
         <div className="hero-meta hm-right">Mohali, India</div>
       </motion.div>
+
+      <StickerField />
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}
       <NoiseOverlay />
